@@ -4,7 +4,7 @@ import sys
 # ─────────────────────────────────────────
 # Step 1: Define the character ramp (lightest to darkest)
 # ─────────────────────────────────────────
-ramp = " .:-=+*#%@"
+ramp = " .'`^\",:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
 # ─────────────────────────────────────────
 # Step 2: Read the entire PPM file into one string
@@ -55,7 +55,7 @@ for i in range(0, len(pixel_data), 3):
     
     # 5e. Print the character (no newline yet)
     character = ramp[index]
-    print(character * 2, end="")
+    print(f"\033[38;2;{r};{g};{b}m{character * 2}\033[0m", end="")
 
     pixel_count += 1
     if (pixel_count % width) == 0:
