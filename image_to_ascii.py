@@ -1,4 +1,5 @@
 # image_to_ascii.py
+import sys
 
 # ─────────────────────────────────────────
 # Step 1: Define the character ramp (lightest to darkest)
@@ -8,7 +9,12 @@ ramp = " .:-=+*#%@"
 # ─────────────────────────────────────────
 # Step 2: Read the entire PPM file into one string
 # ─────────────────────────────────────────
-with open("photo4.ppm") as f:
+
+if len(sys.argv) != 2:
+    print("Usage: python image_to_ascii.py <filename>")
+    sys.exit(1)
+
+with open(sys.argv[1]) as f:
     contents = f.read()
 
 # ─────────────────────────────────────────
