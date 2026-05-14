@@ -21,3 +21,14 @@ A tiny image-to-ASCII converter written in pure vanilla Python — no Pillow, no
 - Only supports the ASCII variant of PPM (P3), not the binary variant (P6).
 - Filename is hardcoded; no CLI argument support yet.
 - Simple brightness average; doesn't use perceptual luminance weighting.
+
+## Supported formats
+
+Handles both PPM variants:
+- **P3** (ASCII text) — bigger files, human-readable.
+- **P6** (binary) — smaller files, the default ImageMagick produces.
+
+No need to pass `-compress none` to ImageMagick anymore — either format works:
+```
+magick photo.jpg -resize 70x50 photo.ppm
+```
