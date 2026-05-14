@@ -6,7 +6,7 @@ A tiny image-to-ASCII converter written in pure vanilla Python — no Pillow, no
 
 1. Convert any image to PPM format with ImageMagick:
 2. Run the script with the PPM file as an argument:
-3. Run:
+3. Run: python image_to_ascii.py photo.ppm
 
 ## How it works
 
