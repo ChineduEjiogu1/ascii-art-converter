@@ -45,7 +45,7 @@ for i in range(0, len(pixel_data), 3):
     b = pixel_data[i+2]
     
     # 5b. Compute brightness (simple average)
-    brightness = (r + g + b) / 3
+    brightness = 0.299 * r + 0.587 * g + 0.114 * b
     
     # 5c. Compute darkness fraction (0.0 = white, 1.0 = black)
     darkness_fraction = (255 - brightness) / 255
