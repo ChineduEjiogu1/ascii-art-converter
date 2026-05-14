@@ -7,7 +7,7 @@ import sys
 # Step 2: Read the entire PPM file into one string
 # ─────────────────────────────────────────
 
-if len(sys.argv) != 2:
+if len(sys.argv) not in (2, 3):
     print("Usage: python image_to_ascii.py <filename>")
     sys.exit(1)
 
